@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.9
 // @description  Extract test names and generate a playlist file for Visual Studio Test Explorer on Ctrl + \ key press.
-// @author       Your Name
+// @author       Karol
 // @match        *://*/*
 // @grant        none
 // ==/UserScript==
