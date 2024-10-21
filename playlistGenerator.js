@@ -63,6 +63,15 @@
         console.log('Playlist file download triggered');
     }
 
+    // Function to format the current date as YYYY-MM-DD
+    function getCurrentDate() {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0'); // Add leading zero if needed
+        const day = String(today.getDate()).padStart(2, '0'); // Add leading zero if needed
+        return `${day}-${month}-${year}`;
+    }
+
     // Function to handle the key press event
     function handleKeyPress(event) {
         // Check if the Ctrl key is pressed and the key is backslash
@@ -77,8 +86,11 @@
                 const envName = firstTestName.split('NightlyBuild_')[1]; // Take the part before the first dot
                 const lastTestName = testNames[testNames.length - 1];
                 const className = lastTestName.split('.')[0];
-                const fileName = `${envName}_${className}`; // You can change '_' to another separator if needed
 
+                // Get current dat
+                const currentDate = getCurrentDate();
+
+                const fileName = `${envName}_${className}_${currentDate}`; // You can change '_' to another separator if needed
 
                 downloadPlaylistFile(playlistContent, fileName);
             } else {
