@@ -11,7 +11,7 @@
 (function() {
     'use strict';
 
-    console.log("Tampermonkey script is running!");
+    console.log("Playlist generator script is running!");
 
     // Function to extract the test names from the HTML
     function extractTestNames() {
